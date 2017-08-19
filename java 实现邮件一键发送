@@ -1,0 +1,41 @@
+库的导入
+<!-- poi -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.15</version>
+    </dependency>
+    <!--zdk add 2017-5-16-->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.15</version>
+    </dependency>
+
+    <!-- Java邮件操作类-->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.5</version>
+    </dependency>
+    
+    java代码
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Date;
+import java.util.Properties;
+public class javaMailSendTest{
+//发送邮箱//
+public String myEmailAccount = "110270882@qq.com";
+//授权码//
+public static String myEmailPassword = "";
+//服务器地址//
+public static String myEmailHost = "smtp.qq.com";
+//收邮箱//
+public static String recieveEmailAccount = "";
+public static void main (String args[]) throw exception{
+
+}
+}
