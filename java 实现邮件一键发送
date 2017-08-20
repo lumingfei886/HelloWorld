@@ -36,6 +36,17 @@ public static String myEmailHost = "smtp.qq.com";
 //收邮箱//
 public static String recieveEmailAccount = "";
 public static void main (String args[]) throw exception{
-
+Properties props = new Properties();                    // 参数配置
+props.setProperty("mail.transport.protocol","smtp");
+props.setProperty("mail.smtp.host",myEmailHost);
+props.setProperty("mail.smtp.auth","true");
+final String smtpPort = "465";
+props.setProperty("mail.smtp.port",smtpPort);
+props.setProperty("mail.smtp.socketFactory.class","java.net.ssl.SSLSocketFactory");
+props.setProperty("mail.smtp.socketFactory.fallback","false");
+props.setProperty("mail.smtp.socketFactory.port",smtpPort);
+Session session = Session.getDefaultInstance(props);
+session.setDebug(true);
+MineMessage message = creatMineMessage(session,my
 }
 }
